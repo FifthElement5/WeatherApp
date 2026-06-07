@@ -9,5 +9,8 @@
   color: blue;
   padding: 20px;
   border: 1px solid black;
+  background-color: lightgray;
+  border-radius: 10px;
+  
 }
 </style>
