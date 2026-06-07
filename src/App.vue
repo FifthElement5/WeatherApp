@@ -1,5 +1,5 @@
 <script setup>
-import Weather from './components/Weather.vue/index.js'
+import Weather from './components/Weather.vue'
 import Search from './components/Search.vue'
 import WeatherDetails from './components/WeatherDetails.vue'
 </script>
