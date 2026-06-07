@@ -1,11 +1,11 @@
 <script setup>
-import Pogoda from './components/Pogoda.vue'
-import Wyszukiwarka from './components/Wyszukiwarka.vue'
+import Weather from './components/Weather.vue/index.js'
+import Search from './components/Search.vue'
 </script>
 
 <template>
   <main>
-    <Pogoda />
-    <Wyszukiwarka /> 
+    <Weather />
+    <Search /> 
   </main>
 </template>
