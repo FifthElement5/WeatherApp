@@ -59,7 +59,7 @@
   height: 570px;
   width: 100%;
   overflow: hidden;
-  background: url("https://s-media-cache-ak0.pinimg.com/564x/cf/1e/c4/cf1ec4b0c96e59657a46867a91bb0d1e.jpg") no-repeat;
+  background: url("https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?q=80&w=600") no-repeat;
   background-size: cover;
   background-position: center center;
   text-align: center;
@@ -191,7 +191,7 @@
   color: rgba(0, 0, 0, 0.8);
 }
 .weather-card.rain .top {
-  background: url("http://img.freepik.com/free-vector/girl-with-umbrella_1325-5.jpg?size=338&ext=jpg") no-repeat;
+  background: url("https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?q=80&w=600") no-repeat;
   background-size: cover;
   background-position: center center;
 }
