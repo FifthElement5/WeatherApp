@@ -63,7 +63,7 @@ defineProps({
   border: none;
   border-radius: 0 20px 20px 0 !important;
   padding: 0 25px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 600;
 }
 
@@ -84,21 +84,23 @@ defineProps({
 .info-title {
   font-size: 24px;
   font-weight: 700;
-  color: #516395;
+  color: #fff;
 }
 
 .info-location {
   font-size: 18px;
   font-weight: 500;
-  color: #614385;
+  color: #fff;
   display: flex;
   align-items: center;
   gap: 5px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .location-icon {
-  color: #516395;
+  color: #fff;
   font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* DUŻE EKRANY (Komputery/Tablety) */

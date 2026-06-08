@@ -70,7 +70,7 @@ defineProps({
   height: 570px;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(81, 99, 149, 0.6) 0%, rgba(97, 67, 133, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(81, 99, 149, 0.5) 0%, rgba(97, 67, 133, 0.5) 100%);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 }
