@@ -6,8 +6,9 @@ import WeatherDetails from './components/WeatherDetails.vue'
 
 <template>
   <main>
-    <Weather />
     <Search /> 
+    <Weather />
+    
     <WeatherDetails />
   </main>
 </template>
