@@ -71,10 +71,9 @@ defineProps({
   height: 570px;
   width: 100%;
   overflow: hidden;
-  background: url("https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?q=80&w=600") no-repeat;
-  background-size: cover;
-  background-position: center center;
-  text-align: center;
+  background: linear-gradient(135deg, #516395 0%, #614385 100%);
+
+ 
 }
 .weather-card .top .wrapper {
   padding: 30px;

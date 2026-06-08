@@ -47,7 +47,7 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: rgba(255, 255, 255, 0.7) url(@/assets/back.jpg);
+  background: rgba(237, 242, 241, 0.8) url(@/assets/back.jpg);
   background-blend-mode: lighten;
 
   background-repeat: no-repeat;
