@@ -1,3 +1,13 @@
+<script setup>
+// Otwieramy drzwi komponentu i przyjmujemy naszą paczkę danych z App.vue
+defineProps({
+  weatherData: {
+    type: Object,
+    required: true
+  }
+})
+</script>
+
 <template>
   <div class="weather-card one shadow">
     
@@ -8,10 +18,12 @@
           <a href="javascript:;"><span class="lnr lnr-cog"></span></a>
         </div>
         
-        <h1 class="heading">Clear night</h1>
-        <h3 class="location">Dhaka, Bangladesh</h3>
+        <h1 class="heading">{{ weatherData.weather[0].description }}</h1>
+        
+        <h3 class="location">{{ weatherData.name }}</h3>
+        
         <p class="temp">
-          <span class="temp-value">20</span>
+          <span class="temp-value">{{ weatherData.main.temp }}</span>
           <span class="deg">0</span>
           <a href="javascript:;"><span class="temp-type">C</span></a>
         </p>
@@ -42,7 +54,7 @@
 </template>
 
 <style scoped>
-/* Import czcionek i ikon bezpośrednio do tego komponentu */
+/* Twoje style bez zmian... */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
 @import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
 
