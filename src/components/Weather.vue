@@ -54,7 +54,6 @@ defineProps({
 </template>
 
 <style scoped>
-/* Twoje style bez zmian... */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
 @import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
 
@@ -62,67 +61,79 @@ defineProps({
   margin: 60px auto;
   height: 740px;
   width: 450px;
-  background: #fff;
   box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .weather-card .top {
   position: relative;
   height: 570px;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #516395 0%, #614385 100%);
-
- 
+  background: linear-gradient(135deg, rgba(81, 99, 149, 0.6) 0%, rgba(97, 67, 133, 0.6) 100%);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
+
 .weather-card .top .wrapper {
   padding: 30px;
   position: relative;
   z-index: 1;
 }
+
 .weather-card .top .wrapper .mynav {
   height: 20px;
 }
+
 .weather-card .top .wrapper .mynav .lnr {
   color: #fff;
   font-size: 20px;
 }
+
 .weather-card .top .wrapper .mynav .lnr-chevron-left {
   display: inline-block;
   float: left;
 }
+
 .weather-card .top .wrapper .mynav .lnr-cog {
   display: inline-block;
   float: right;
 }
+
 .weather-card .top .wrapper .heading {
   margin-top: 20px;
   font-size: 35px;
   font-weight: 400;
   color: #fff;
 }
+
 .weather-card .top .wrapper .location {
   margin-top: 20px;
   font-size: 21px;
   font-weight: 400;
   color: #fff;
 }
+
 .weather-card .top .wrapper .temp {
   margin-top: 20px;
 }
+
 .weather-card .top .wrapper .temp a {
   text-decoration: none;
   color: #fff;
 }
+
 .weather-card .top .wrapper .temp a .temp-type {
   font-size: 85px;
 }
+
 .weather-card .top .wrapper .temp .temp-value {
   display: inline-block;
   font-size: 85px;
   font-weight: 600;
   color: #fff;
 }
+
 .weather-card .top .wrapper .temp .deg {
   display: inline-block;
   font-size: 35px;
@@ -131,6 +142,7 @@ defineProps({
   vertical-align: top;
   margin-top: 10px;
 }
+
 .weather-card .top:after {
   content: "";
   height: 100%;
@@ -139,12 +151,15 @@ defineProps({
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
 }
+
 .weather-card .bottom {
   padding: 0 30px;
   background: #fff;
+  height: 170px;
 }
+
 .weather-card .bottom .wrapper .forecast {
   overflow: hidden;
   margin: 0;
@@ -153,16 +168,19 @@ defineProps({
   padding-top: 20px;
   max-height: 155px;
 }
+
 .weather-card .bottom .wrapper .forecast a {
   text-decoration: none;
   color: #000;
 }
+
 .weather-card .bottom .wrapper .forecast .go-up {
   text-align: center;
   display: block;
   font-size: 25px;
   margin-bottom: 10px;
 }
+
 .weather-card .bottom .wrapper .forecast li {
   display: block;
   font-size: 25px;
@@ -171,15 +189,18 @@ defineProps({
   line-height: 1em;
   margin-bottom: 30px;
 }
+
 .weather-card .bottom .wrapper .forecast li .date {
   display: inline-block;
 }
+
 .weather-card .bottom .wrapper .forecast li .condition {
   display: inline-block;
   vertical-align: middle;
   float: right;
   font-size: 25px;
 }
+
 .weather-card .bottom .wrapper .forecast li .condition .temp {
   display: inline-block;
   vertical-align: top;
@@ -188,6 +209,7 @@ defineProps({
   font-weight: 400;
   padding-top: 2px;
 }
+
 .weather-card .bottom .wrapper .forecast li .condition .temp .deg {
   display: inline-block;
   font-size: 10px;
@@ -195,12 +217,15 @@ defineProps({
   margin-left: 3px;
   vertical-align: top;
 }
+
 .weather-card .bottom .wrapper .forecast li .condition .temp .temp-type {
   font-size: 20px;
 }
+
 .weather-card .bottom .wrapper .forecast li.active {
   color: rgba(0, 0, 0, 0.8);
 }
+
 .weather-card.rain .top {
   background: url("https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?q=80&w=600") no-repeat;
   background-size: cover;

@@ -47,13 +47,12 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: rgba(237, 242, 241, 0.8) url(@/assets/back.jpg);
+  background: rgba(0, 0, 0, 0.9) url(@/assets/background-weather.jpg);
   background-blend-mode: lighten;
 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   
   font-family: roboto, sans-serif;
 }
