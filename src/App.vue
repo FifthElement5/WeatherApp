@@ -47,12 +47,18 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background-image: url(@/assets/background.jpg);
+  background: rgba(255, 255, 255, 0.7) url(@/assets/back.jpg);
+  background-blend-mode: lighten;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   
-  font-family: sans-serif;
+  font-family: roboto, sans-serif;
 }
 
-/* Główny kontener aplikacji */
+/* Główny kontener aplikacji *
 .app-layout {
   max-width: 1200px;
   margin: 0 auto;
