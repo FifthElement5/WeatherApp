@@ -6,6 +6,12 @@ defineProps({
     required: true
   }
 })
+
+const formatTime = (timestamp) => {
+  if (!timestamp) return ''
+  const date = new Date(timestamp * 1000)
+  return date.toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit' })
+}
 </script>
 
 <template>
@@ -21,6 +27,7 @@ defineProps({
         <h1 class="heading">{{ weatherData.weather[0].description }}</h1>
         
         <h3 class="location">{{ weatherData.name }}</h3>
+        <h2 class="country">{{ weatherData.sys.country }}</h2>
         
         <p class="temp">
           <span class="temp-value">{{ weatherData.main.temp }}</span>
@@ -28,6 +35,11 @@ defineProps({
           <a href="javascript:;"><span class="temp-type">C</span></a>
         </p>
       </div>
+
+      <div class="sun-info">
+  <p>🌅 Wschód słońca: {{ formatTime(weatherData.sys.sunrise) }}</p>
+  <p>🌇 Zachód słońca: {{ formatTime(weatherData.sys.sunset) }}</p>
+</div>
     </div>
 
     <!-- <div class="bottom">

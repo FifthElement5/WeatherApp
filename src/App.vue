@@ -6,9 +6,10 @@ import WeatherDetails from './components/WeatherDetails.vue'
 import Recommendations from './components/Recommendations.vue'
 import Navbar from './components/Navbar.vue'
 
-const API_KEY = '7ffbbcfe418669afce91ab605f6628e7'
+// Twój nowy klucz API
+const API_KEY = '36801d9059d4683e891dadc95ffb1710'
 
-// TWOJE DOTYCHCZASOWE DANE (MOCK) - zostają jako bezpieczny start aplikacji!
+// TWÓJ ORYGINALNY MOCK - nic w nim nie zmieniamy, nazwa zostaje ta sama!
 const weatherData = ref({
   name: "Warszawa (Test)",
   main: {
@@ -29,10 +30,15 @@ const weatherData = ref({
       description: "broken clouds",
       icon: "04d"
     }
-  ]
+  ],
+  sys: {
+    country: "PL",
+    sunrise: 1717900000,
+    sunset: 1717950000
+  }
 })
 
-// Bezpieczna funkcja pobierająca dane
+// Prosta funkcja, która tylko bierze dane z internetu i wkłada je do Twojego mocka
 const fetchWeather = async (city) => {
   try {
     const response = await fetch(
@@ -40,22 +46,21 @@ const fetchWeather = async (city) => {
     )
     
     if (!response.ok) {
-      alert('Nie znaleziono miasta lub klucz API jeszcze nie działa!')
+      alert('Nie znaleziono miasta!')
       return
     }
     
     const data = await response.json()
-    weatherData.value = data // Jeśli wszystko jest ok, nadpisujemy mocka prawdziwymi danymi
+    // Nadpisujemy Twój mock danymi z internetu - struktura z API pasuje do Twojego mocka!
+    weatherData.value = data 
   } catch (error) {
-    console.error("API jeszcze nie odpowiedziało, używam danych testowych:", error)
+    console.error("Błąd pobierania:", error)
   }
 }
 
-// Po uruchomieniu próbujemy pobrać prawdziwą pogodę. Jak się nie uda - zostaje stary mock.
+// Po uruchomieniu pobieramy prawdziwą pogodę dla Warszawy
 onMounted(() => {
-  if (API_KEY !== '7ffbbcfe418669afce91ab605f6628e7') {
-    fetchWeather('Warszawa')
-  }
+  fetchWeather('London')
 })
 </script>
 
@@ -64,7 +69,8 @@ onMounted(() => {
   <main class="app-layout">
    
     <div class="search-wrapper">
-      <Search :weatherData="weatherData" /> 
+     
+      <Search :weatherData="weatherData" @search-city="fetchWeather" />
     </div>
     
     <div class="content-wrapper">

@@ -1,11 +1,26 @@
 <script setup>
-// Odbieramy dane z góry, żeby móc wyświetlić aktualną nazwę miasta obok ikony
+import { ref } from 'vue'
+
 defineProps({
   weatherData: {
     type: Object,
     required: true
   }
 })
+
+// Pudełko na nazwę miasta wpisywaną z klawiatury
+const city = ref('')
+
+// Nasz nadajnik radiowy
+const emit = defineEmits(['search-city'])
+
+// Funkcja, która zbiera tekst i wysyła go w górę
+const handleSearch = () => {
+  if (city.value.trim() !== '') {
+    emit('search-city', city.value) // Wystrzeliwujemy miasto do App.vue
+    city.value = '' // Czyścimy okienko po wyszukaniu
+  }
+}
 </script>
 
 <template>
@@ -21,12 +36,14 @@ defineProps({
 
     <div class="input-group">
       <input 
+        v-model="city"
+        @keydown.enter="handleSearch"
         type="text" 
         class="form-control search-input" 
         placeholder="Wpisz nazwę miasta..."
       />
       <div class="input-group-append">
-        <button class="btn btn-search" type="button">
+        <button @click="handleSearch" class="btn btn-search" type="button">
           Szukaj
         </button>
       </div>
