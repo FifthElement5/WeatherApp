@@ -23,7 +23,7 @@ defineProps({
       <input 
         type="text" 
         class="form-control search-input" 
-        placeholder="Wpisz nazwę miasta (np. Warszawa)..."
+        placeholder="Wpisz nazwę miasta..."
       />
       <div class="input-group-append">
         <button class="btn btn-search" type="button">

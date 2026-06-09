@@ -4,7 +4,7 @@
       
       <div class="brand">
         <img src="@/assets/logoWeatherApp192.png" alt="Logo" class="logo-img" />
-        <span class="brand-name">Weather App</span>
+        <span class="brand-name">Pogodynka</span>
       </div>
       
       <div class="nav-actions">
