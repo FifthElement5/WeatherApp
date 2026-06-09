@@ -30,7 +30,7 @@ defineProps({
       </div>
     </div>
 
-    <div class="bottom">
+    <!-- <div class="bottom">
       <div class="wrapper">
         <ul class="forecast">
           <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
@@ -48,7 +48,7 @@ defineProps({
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </template>
@@ -59,7 +59,7 @@ defineProps({
 
 .weather-card {
   margin: 60px auto;
-  height: 740px;
+  height: 570px;
   width: 450px;
   box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
