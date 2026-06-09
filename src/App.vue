@@ -1,12 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import Weather from './components/Weather.vue'
 import Search from './components/Search.vue'
 import WeatherDetails from './components/WeatherDetails.vue'
 import Recommendations from './components/Recommendations.vue'
 
+const API_KEY = '7ffbbcfe418669afce91ab605f6628e7'
+
+// TWOJE DOTYCHCZASOWE DANE (MOCK) - zostają jako bezpieczny start aplikacji!
 const weatherData = ref({
-  name: "Warszawa",
+  name: "Warszawa (Test)",
   main: {
     temp: 18.5,
     feels_like: 17.2,
@@ -26,6 +29,32 @@ const weatherData = ref({
       icon: "04d"
     }
   ]
+})
+
+// Bezpieczna funkcja pobierająca dane
+const fetchWeather = async (city) => {
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric&lang=pl`
+    )
+    
+    if (!response.ok) {
+      alert('Nie znaleziono miasta lub klucz API jeszcze nie działa!')
+      return
+    }
+    
+    const data = await response.json()
+    weatherData.value = data // Jeśli wszystko jest ok, nadpisujemy mocka prawdziwymi danymi
+  } catch (error) {
+    console.error("API jeszcze nie odpowiedziało, używam danych testowych:", error)
+  }
+}
+
+// Po uruchomieniu próbujemy pobrać prawdziwą pogodę. Jak się nie uda - zostaje stary mock.
+onMounted(() => {
+  if (API_KEY !== '7ffbbcfe418669afce91ab605f6628e7') {
+    fetchWeather('Warszawa')
+  }
 })
 </script>
 
@@ -56,8 +85,8 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: rgba(0, 0, 0, 0.1) url(@/assets/background-weather3.jpeg);
-  background-blend-mode: overlay;
+  background: url(@/assets/background-weather4.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
