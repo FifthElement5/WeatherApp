@@ -63,7 +63,7 @@ defineProps({
   border: none;
   border-radius: 0 20px 20px 0 !important;
   padding: 0 25px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -82,13 +82,13 @@ defineProps({
 }
 
 .info-title {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
   color: #fff;
 }
 
 .info-location {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 500;
   color: #fff;
   display: flex;

@@ -4,6 +4,7 @@ import Weather from './components/Weather.vue'
 import Search from './components/Search.vue'
 import WeatherDetails from './components/WeatherDetails.vue'
 import Recommendations from './components/Recommendations.vue'
+import Navbar from './components/Navbar.vue'
 
 const API_KEY = '7ffbbcfe418669afce91ab605f6628e7'
 
@@ -59,8 +60,9 @@ onMounted(() => {
 </script>
 
 <template>
+<Navbar />
   <main class="app-layout">
-    
+   
     <div class="search-wrapper">
       <Search :weatherData="weatherData" /> 
     </div>
