@@ -60,7 +60,7 @@ const fetchWeather = async (city) => {
 
 // Po uruchomieniu pobieramy prawdziwą pogodę dla Warszawy
 onMounted(() => {
-  fetchWeather('London')
+  fetchWeather('Zielona Góra') 
 })
 </script>
 

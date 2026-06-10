@@ -27,7 +27,7 @@ const formatTime = (timestamp) => {
         <h1 class="heading">{{ weatherData.weather[0].description }}</h1>
         
         <h3 class="location">{{ weatherData.name }}</h3>
-        <h2 class="country">{{ weatherData.sys.country }}</h2>
+        <h3 class="country" style="color: #fff;">{{ weatherData.sys.country }}</h3>
         
         <p class="temp">
           <span class="temp-value">{{ weatherData.main.temp }}</span>
@@ -36,31 +36,10 @@ const formatTime = (timestamp) => {
         </p>
       </div>
 
-      <div class="sun-info">
-  <p>🌅 Wschód słońca: {{ formatTime(weatherData.sys.sunrise) }}</p>
-  <p>🌇 Zachód słońca: {{ formatTime(weatherData.sys.sunset) }}</p>
-</div>
+
     </div>
 
-    <!-- <div class="bottom">
-      <div class="wrapper">
-        <ul class="forecast">
-          <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
-          <li class="active">
-            <span class="date">Yesterday</span>
-            <span class="lnr lnr-sun condition">
-              <span class="temp">23<span class="deg">0</span><span class="temp-type">C</span></span>
-            </span>
-          </li>
-          <li>
-            <span class="date">Tomorrow</span>
-            <span class="lnr lnr-cloud condition">
-              <span class="temp">21<span class="deg">0</span><span class="temp-type">C</span></span>
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div> -->
+
 
   </div>
 </template>
@@ -243,4 +222,6 @@ const formatTime = (timestamp) => {
   background-size: cover;
   background-position: center center;
 }
+
+
 </style>
