@@ -93,11 +93,10 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: url(@/assets/background-weather4.jpg);
-  background-attachment: fixed;
+  background: url(@/assets/background-weather4.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: left;
   font-family: Roboto, sans-serif;
 }
 

@@ -8,7 +8,7 @@ defineProps({
   }
 })
 
-// Pudełko na nazwę miasta wpisywaną z klawiatury
+
 const city = ref('')
 
 // Nasz nadajnik radiowy
@@ -17,8 +17,8 @@ const emit = defineEmits(['search-city'])
 // Funkcja, która zbiera tekst i wysyła go w górę
 const handleSearch = () => {
   if (city.value.trim() !== '') {
-    emit('search-city', city.value) // Wystrzeliwujemy miasto do App.vue
-    city.value = '' // Czyścimy okienko po wyszukaniu
+    emit('search-city', city.value) 
+    city.value = '' 
   }
 }
 </script>
