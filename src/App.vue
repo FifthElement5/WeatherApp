@@ -38,7 +38,6 @@ const weatherData = ref({
   }
 })
 
-// Prosta funkcja, która tylko bierze dane z internetu i wkłada je do Twojego mocka
 const fetchWeather = async (city) => {
   try {
     const response = await fetch(
@@ -51,14 +50,13 @@ const fetchWeather = async (city) => {
     }
     
     const data = await response.json()
-    // Nadpisujemy Twój mock danymi z internetu - struktura z API pasuje do Twojego mocka!
     weatherData.value = data 
   } catch (error) {
     console.error("Błąd pobierania:", error)
   }
 }
 
-// Po uruchomieniu pobieramy prawdziwą pogodę dla Warszawy
+// Po uruchomieniu pobieramy prawdziwą pogodę dla Zielna Gora 
 onMounted(() => {
   fetchWeather('Zielona Góra') 
 })
