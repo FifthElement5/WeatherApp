@@ -74,7 +74,7 @@ const recommendation = computed(() => {
 
 .rec-image {
   width: 100%;
-  height: 220px; /* Zwiększyłem wysokość zdjęcia, bo nie ma już tekstów */
+  height: 220px; 
   background-size: cover;
   background-position: center;
   flex-shrink: 0;
@@ -84,8 +84,8 @@ const recommendation = computed(() => {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centrujemy ikony w rzędzie */
-  gap: 30px; /* Odstępy między ikonami */
+  justify-content: center; 
+  gap: 30px; 
   background: transparent;
 }
 
