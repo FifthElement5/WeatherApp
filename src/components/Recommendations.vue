@@ -90,12 +90,12 @@ const recommendation = computed(() => {
 }
 
 .rec-icon {
-  font-size: 32px; /* Ikony są teraz duże i czytelne */
-  color: #222222; /* Ciemny, elegancki kolor ładnie kontrastujący z białawym tłem */
+  font-size: 32px; 
+  color: #222222; 
   transition: transform 0.2s ease;
 }
 
 .rec-icon:hover {
-  transform: scale(1.15); /* Delikatny efekt po najechaniu myszką */
+  transform: scale(1.15); 
 }
 </style>
