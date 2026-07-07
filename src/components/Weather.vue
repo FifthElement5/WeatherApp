@@ -1,5 +1,5 @@
 <script setup>
-// Otwieramy drzwi komponentu i przyjmujemy naszą paczkę danych z App.vue
+
 defineProps({
   weatherData: {
     type: Object,
