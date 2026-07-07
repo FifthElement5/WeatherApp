@@ -82,12 +82,12 @@ const formatTime = (timestamp) => {
 }
 
 .weather-card .top .wrapper .mynav .lnr-chevron-left {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
 }
 
 .weather-card .top .wrapper .mynav .lnr-cog {
-  display: inline-block;
+  /* display: inline-block; */
   float: right;
 }
 
@@ -186,7 +186,7 @@ const formatTime = (timestamp) => {
 }
 
 .weather-card .bottom .wrapper .forecast li .condition {
-  display: inline-block;
+  /* display: inline-block; */
   vertical-align: middle;
   float: right;
   font-size: 25px;
