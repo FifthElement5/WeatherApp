@@ -21,25 +21,20 @@
 @import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
 
 .top-navbar {
-  /* Rozciąganie na pełną szerokość ekranu */
   width: 100vw; 
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  
-  padding: 15px 0;
+    padding: 15px 0;
   margin-bottom: 40px;
-  
-  /* Ciemne, mocno przezroczyste tło */
-  background: rgba(10, 10, 15, 0.5) !important;
+    background: rgba(10, 10, 15, 0.5) !important;
   
   /* Efekt rozmycia tła (szkło) */
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
-  
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
