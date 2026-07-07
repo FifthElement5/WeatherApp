@@ -7,11 +7,11 @@
         <span class="brand-name">Pogodynka</span>
       </div>
       
-      <div class="nav-actions">
+      <!-- <div class="nav-actions">
         <button class="nav-btn">
           <span class="lnr lnr-cog"></span>
         </button>
-      </div>
+      </div> -->
 
     </div>
   </nav>
@@ -43,7 +43,6 @@
 }
 
 .nav-container {
-  /* Zawartość wewnątrz paska nadal trzyma się ładnego środka */
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -58,9 +57,8 @@
   gap: 12px;
 }
 
-/* Style dla Twojego obrazka logo */
 .logo-img {
-  height: 35px; /* Wysokość logo, dopasuj do siebie */
+  height: 35px; 
   width: auto;
   object-fit: contain;
 }
