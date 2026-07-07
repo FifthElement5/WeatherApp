@@ -8,7 +8,6 @@ defineProps({
   }
 })
 
-
 const city = ref('')
 
 // Nasz nadajnik radiowy
@@ -56,9 +55,8 @@ const handleSearch = () => {
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
 @import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
 
-/* Dopasowujemy styl wyszukiwarki do Twojej karty pogodowej */
 .search-container {
-  max-width: 450px; /* Domyślne ograniczenie na małe ekrany */
+  max-width: 450px; 
   width: 100%;
 }
 
@@ -92,7 +90,7 @@ const handleSearch = () => {
 /* STYLOWANIE PASKA INFORMACYJNEGO */
 .info-bar {
   display: flex;
-  flex-direction: column; /* Na małym ekranie: jeden pod drugim */
+  flex-direction: column; 
   align-items: center;
   gap: 10px;
   width: 100%;
@@ -122,15 +120,13 @@ const handleSearch = () => {
 
 /* DUŻE EKRANY (Komputery/Tablety) */
 @media (min-width: 992px) {
-  /* Cały kontener wyszukiwarki może się rozszerzyć na dużym ekranie */
   .search-container {
     max-width: 920px; 
   }
 
-  /* Pasek informacyjny układa się obok siebie */
   .info-bar {
     flex-direction: row;
-    justify-content: space-between; /* Rozsuwa tytuł i miasto na boki */
+    justify-content: space-between; 
     margin-bottom: 25px !important;
   }
 }

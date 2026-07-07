@@ -62,7 +62,6 @@ const formatTime = (timestamp) => {
   width: 100%;
   overflow: hidden;
   background: linear-gradient(135deg, rgba(81, 99, 149, 0.8) 0%, rgba(97, 67, 133, 0.7) 100%);
-
   /* backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px); */
 }
