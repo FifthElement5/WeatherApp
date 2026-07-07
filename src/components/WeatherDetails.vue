@@ -41,7 +41,6 @@ defineProps({
 </template>
 
 <style scoped>
-/* Powrót do Linearicons */
 @import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
 
 .details-container {
@@ -67,7 +66,7 @@ defineProps({
 }
 
 .detail-icon {
-  font-size: 32px; /* Zwiększony rozmiar dla starych ikon */
+  font-size: 32px;
   color: #ffffff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
   margin-bottom: 10px;
